@@ -38,3 +38,27 @@ function playRound(playerSelection, computerSelection) {
         return "computerWin"
     }
 };
+
+//Create game function that plays 5 rounds of RPS and then displays the winner
+
+function game() {
+    for (let i = 1; i <= 5; i++) {
+        let roundResult = playRound(getPlayerChoice(), getComputerChoice());
+        if (roundResult === "playerWin") {
+            playerScore++;
+            console.log(`You win round ${i}`);
+        } else if (roundResult === "computerWin") {
+            computerScore++;
+            console.log(`The computer has won round ${i}`);
+        } else {
+            console.log("It is a tie - no one wins.");
+        }
+    }
+    if (playerScore > computerScore) {
+        return console.log("Congratulations! You have defeated the computer.");
+    } else if (playerScore < computerScore) {
+        return console.log("Unfortunately, you have been defeated by the computer");
+    } else {
+        return console.log("It is a tie so no one wins.")
+    }
+};
