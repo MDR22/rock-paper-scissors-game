@@ -1,3 +1,7 @@
+//Add player and computer score constants
+let playerScore = 0;
+let computerScore = 0;
+
 //Add constant equivalent to getComputerChoice function
 const computerSelection = getComputerChoice();
 
