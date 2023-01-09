@@ -17,3 +17,20 @@ function getPlayerChoice() {
     let playerChoiceLower = playerChoice.toLowerCase();
     return playerChoiceLower;
 };
+
+//Create playRound function that plays a round of RPS and determines the winner
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        console.log(playerSelection, computerSelection);
+        return "Tie";
+    } else if (playerSelection === "rock" && computerSelection === "scissors" ||
+    playerSelection === "paper" && computerSelection === "rock" ||
+    playerSelection === "scissors" && computerSelection === "paper") {
+        console.log(playerSelection, computerSelection);
+        return "playerWin";
+    } else {
+        console.log(playerSelection, computerSelection);
+        return "computerWin"
+    }
+};
