@@ -5,3 +5,11 @@ function getComputerChoice() {
     const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     return computerChoice;
 };
+
+//Create getPlayerChoice function that prompts user to enter a selection then converts answer to lower case
+
+function getPlayerChoice() {
+    let playerChoice = prompt("Choose an option - rock, paper, or scissors");
+    let playerChoiceLower = playerChoice.toLowerCase();
+    return playerChoiceLower;
+};
