@@ -55,10 +55,10 @@ function game() {
         }
     }
     if (playerScore > computerScore) {
-        return console.log("Congratulations! You have defeated the computer.");
+        return console.log(`Congratulations! You have defeated the computer. The final score was Player: ${playerScore} and Computer: ${computerScore}`);
     } else if (playerScore < computerScore) {
-        return console.log("Unfortunately, you have been defeated by the computer");
+        return console.log(`Unfortunately, you have been defeated by the computer. The final score was Player: ${playerScore} and Computer: ${computerScore}`);
     } else {
-        return console.log("It is a tie so no one wins.")
+        return console.log(`It is a tie so no one wins. The final score was Player: ${playerScore} and Computer: ${computerScore}`);
     }
 };
