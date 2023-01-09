@@ -1,3 +1,7 @@
+//Add constant equivalent to getComputerChoice function
+const computerSelection = getComputerChoice();
+
+
 //Create getComputerChoice function that randomly selects option for computer
 
 function getComputerChoice() {
