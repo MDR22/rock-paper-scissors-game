@@ -68,9 +68,12 @@ function verifyWinner(player, computer) {
 //Create playRound function that plays a round of RPS and determines the winner
 
 function playRound(playerSelection) {
+    if (playerScore < 5 && computerScore < 5) {
+
     const computerSelection = getComputerChoice();
 
     const winner = verifyWinner(playerSelection, computerSelection);
+    };
 
     // if (playerSelection === computerSelection) {
     //     // console.log(playerSelection, computerSelection);
