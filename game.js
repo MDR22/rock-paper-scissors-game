@@ -5,7 +5,14 @@ let computerScore = 0;
 //Add rock paper scissors choices constant
 const rpsChoices = ["rock", "paper", "scissors"];
 
+//Add event listener for the RPS buttons that plays a round of RPS
+const rpsButtons = document.querySelectorAll("button");
 
+rpsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        playRound(button.id);
+    })
+})
 
 
 //Create getComputerChoice function that randomly selects option for computer
