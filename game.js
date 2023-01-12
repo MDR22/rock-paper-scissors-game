@@ -4,10 +4,13 @@ let computerScore = 0;
 
 //Update scores
 const playerScoreUpdated = document.querySelector("#playerScore");
-playerScoreUpdated.textContent = `Your score: ${playerScore}`;
 
 const computerScoreUpdated = document.querySelector("#computerScore");
-computerScoreUpdated.textContent = `Computer score: ${computerScore}`;
+
+function updateScore() {
+    playerScoreUpdated.textContent = `Your score: ${playerScore}`;
+    computerScoreUpdated.textContent = `Computer score: ${computerScore}`;
+};
 
 //Add rock paper scissors choices constant
 const rpsChoices = ["rock", "paper", "scissors"];
