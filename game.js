@@ -2,6 +2,9 @@
 let playerScore = 0;
 let computerScore = 0;
 
+//Add const for reporting results of each round
+const roundResults = document.querySelector("#roundResult");
+
 //Update scores
 const playerScoreUpdated = document.querySelector("#playerScore");
 
@@ -43,7 +46,7 @@ function getPlayerChoice() {
 //Add function that checks who won the round comparing player and computer choice
 function verifyWinner(player, computer) {
     if (player === computer) {
-        console.log(player, computer);
+        roundResults.textContent = `You selected ${player}. The computer selected ${computer}. It is a tie.`;
         updateScore();
         return "Tie";
     } else if (player === "rock" && computer === "scissors" ||
@@ -51,12 +54,12 @@ function verifyWinner(player, computer) {
     player === "scissors" && computer === "paper") {
         playerScore++;
         updateScore();
-        console.log(player, computer);
+        roundResults.textContent = `You selected ${player}. The computer selected ${computer}. You have won this round.`;
         return "playerWin";
     } else {
         computerScore++;
         updateScore();
-        console.log(player, computer);
+        roundResults.textContent = `You selected ${player}. The computer selected ${computer}. You have lost this round.`;
         return "computerWin"
     }
 };
