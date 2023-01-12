@@ -1,4 +1,17 @@
 * {
-    background-color: #5e6056;
-    color: #22fe20;
-}
+    font-family: monospace;
+    color: white;
+};
+
+body {
+    background-color: black;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 160%
+    );
+    height: 100vh;
+    text-shadow: 0 0 5px #C8C8C8;
+};
+
+h1 {
+    display: flex;
+    justify-content: center;
+};
