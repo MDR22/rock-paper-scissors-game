@@ -27,15 +27,15 @@ function getPlayerChoice() {
 //Add function that checks who won the round comparing player and computer choice
 function verifyWinner(player, computer) {
     if (player === computer) {
-        // console.log(playerSelection, computerSelection);
+        console.log(player, computer);
         return "Tie";
     } else if (player === "rock" && computer === "scissors" ||
     player === "paper" && computer === "rock" ||
     player === "scissors" && computer === "paper") {
-        // console.log(playerSelection, computerSelection);
+        console.log(player, computer);
         return "playerWin";
     } else {
-        // console.log(playerSelection, computerSelection);
+        console.log(player, computer);
         return "computerWin"
     }
 };
@@ -43,19 +43,23 @@ function verifyWinner(player, computer) {
 
 //Create playRound function that plays a round of RPS and determines the winner
 
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        // console.log(playerSelection, computerSelection);
-        return "Tie";
-    } else if (playerSelection === "rock" && computerSelection === "scissors" ||
-    playerSelection === "paper" && computerSelection === "rock" ||
-    playerSelection === "scissors" && computerSelection === "paper") {
-        // console.log(playerSelection, computerSelection);
-        return "playerWin";
-    } else {
-        // console.log(playerSelection, computerSelection);
-        return "computerWin"
-    }
+function playRound(playerSelection) {
+    const computerSelection = getComputerChoice();
+
+    const winner = verifyWinner(playerSelection, computerSelection);
+
+    // if (playerSelection === computerSelection) {
+    //     // console.log(playerSelection, computerSelection);
+    //     return "Tie";
+    // } else if (playerSelection === "rock" && computerSelection === "scissors" ||
+    // playerSelection === "paper" && computerSelection === "rock" ||
+    // playerSelection === "scissors" && computerSelection === "paper") {
+    //     // console.log(playerSelection, computerSelection);
+    //     return "playerWin";
+    // } else {
+    //     // console.log(playerSelection, computerSelection);
+    //     return "computerWin"
+    // }
 };
 
 //Create game function that plays 5 rounds of RPS and then displays the winner
