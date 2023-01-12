@@ -12,7 +12,7 @@ const computerSelection = getComputerChoice();
 //Create getComputerChoice function that randomly selects option for computer
 
 function getComputerChoice() {
-    const computerChoice = rpsChoices[Math.floor(Math.random() * computerChoices.length)];
+    const computerChoice = rpsChoices[Math.floor(Math.random() * rpsChoices.length)];
     return computerChoice;
 };
 
@@ -23,6 +23,23 @@ function getPlayerChoice() {
     let playerChoiceLower = playerChoice.toLowerCase();
     return playerChoiceLower;
 };
+
+//Add function that checks who won the round comparing player and computer choice
+function verifyWinner(player, computer) {
+    if (player === computer) {
+        // console.log(playerSelection, computerSelection);
+        return "Tie";
+    } else if (player === "rock" && computer === "scissors" ||
+    player === "paper" && computer === "rock" ||
+    player === "scissors" && computer === "paper") {
+        // console.log(playerSelection, computerSelection);
+        return "playerWin";
+    } else {
+        // console.log(playerSelection, computerSelection);
+        return "computerWin"
+    }
+};
+
 
 //Create playRound function that plays a round of RPS and determines the winner
 
