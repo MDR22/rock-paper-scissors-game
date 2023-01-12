@@ -38,9 +38,11 @@ function verifyWinner(player, computer) {
     } else if (player === "rock" && computer === "scissors" ||
     player === "paper" && computer === "rock" ||
     player === "scissors" && computer === "paper") {
+        playerScore++;
         console.log(player, computer);
         return "playerWin";
     } else {
+        computerScore++;
         console.log(player, computer);
         return "computerWin"
     }
