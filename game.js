@@ -5,8 +5,7 @@ let computerScore = 0;
 //Add rock paper scissors choices constant
 const rpsChoices = ["rock", "paper", "scissors"];
 
-//Add constant equivalent to getComputerChoice function
-const computerSelection = getComputerChoice();
+
 
 
 //Create getComputerChoice function that randomly selects option for computer
