@@ -44,15 +44,18 @@ function getPlayerChoice() {
 function verifyWinner(player, computer) {
     if (player === computer) {
         console.log(player, computer);
+        updateScore();
         return "Tie";
     } else if (player === "rock" && computer === "scissors" ||
     player === "paper" && computer === "rock" ||
     player === "scissors" && computer === "paper") {
         playerScore++;
+        updateScore();
         console.log(player, computer);
         return "playerWin";
     } else {
         computerScore++;
+        updateScore();
         console.log(player, computer);
         return "computerWin"
     }
