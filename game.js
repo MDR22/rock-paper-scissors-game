@@ -73,8 +73,19 @@ function playRound(playerSelection) {
     const computerSelection = getComputerChoice();
 
     const winner = verifyWinner(playerSelection, computerSelection);
-    };
 
+    gameOver();
+    };
+};
+
+//Add game over function
+function gameOver() {
+    if (playerScore === 5) {
+        roundResults.textContent = `Congratulations! You have defeated the computer`;
+    } else if (computerScore === 5) {
+        roundResults.textContent = `Too bad! You have been defeated by the computer`;
+    }
+};
     // if (playerSelection === computerSelection) {
     //     // console.log(playerSelection, computerSelection);
     //     return "Tie";
@@ -87,7 +98,7 @@ function playRound(playerSelection) {
     //     // console.log(playerSelection, computerSelection);
     //     return "computerWin"
     // }
-};
+// };
 
 //Create game function that plays 5 rounds of RPS and then displays the winner
 
