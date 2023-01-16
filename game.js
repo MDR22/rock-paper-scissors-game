@@ -24,8 +24,8 @@ const rpsButtons = document.querySelectorAll(".choicebutton");
 rpsButtons.forEach((button) => {
     button.addEventListener("click", () => {
         playRound(button.id);
-    })
-})
+    });
+});
 
 
 //Create getComputerChoice function that randomly selects option for computer
@@ -86,6 +86,22 @@ function gameOver() {
         roundResults.textContent = `Too bad! You have been defeated by the computer`;
     }
 };
+
+//Add replay game function
+
+function replayGame() {
+    playerScore = 0;
+    computerScore = 0;
+};
+
+//Add replay game event listener
+const replayButton = document.querySelectorAll("#reset");
+
+replayButton.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert("test");
+    });
+});
     // if (playerSelection === computerSelection) {
     //     // console.log(playerSelection, computerSelection);
     //     return "Tie";
