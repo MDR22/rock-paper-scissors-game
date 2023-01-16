@@ -19,7 +19,7 @@ function updateScore() {
 const rpsChoices = ["rock", "paper", "scissors"];
 
 //Add event listener for the RPS buttons that plays a round of RPS
-const rpsButtons = document.querySelectorAll("button");
+const rpsButtons = document.querySelectorAll(".choicebutton");
 
 rpsButtons.forEach((button) => {
     button.addEventListener("click", () => {
