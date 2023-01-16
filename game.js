@@ -92,6 +92,8 @@ function gameOver() {
 function replayGame() {
     playerScore = 0;
     computerScore = 0;
+    updateScore();
+    roundResults.textContent = `NEW GAME. The round result will be displayed here. Good luck!`;
 };
 
 //Add replay game event listener
@@ -99,7 +101,7 @@ const replayButton = document.querySelectorAll("#reset");
 
 replayButton.forEach((button) => {
     button.addEventListener("click", () => {
-        alert("test");
+        replayGame();
     });
 });
     // if (playerSelection === computerSelection) {
